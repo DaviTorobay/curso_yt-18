@@ -1,13 +1,21 @@
-<div class="class">
-  <h1 class = gradient>Cadastro de treinamentos por catraca</h1>
-  <h1>Catracas:</h1>
-  <ul>
-    <li *ngFor="let catraca of catracas">
-      Nome: <a routerLink="/list/{{ catraca.id }}">{{ catraca.name }}</a> - área:
-      {{ catraca.area }}
-      <button (click)="showId(catraca)">Detalhes</button>
-      <button routerLink="/list/{{ catraca.id }}" style="float: right">Editar</button>
-    </li>
-  </ul>
-  <h3>{{ catracaDetails }}</h3>
+<div class="container">
+  <div class="jumbotron">
+    <h1 class="gradient">Cadastro de treinamentos por catraca</h1>
+    <h1>Catracas:</h1>
+
+    <ul>
+      <div class="list-group bg-secondary p-2" style="--bs-bg-opacity: .2;" >
+        <li *ngFor="let catraca of catracas">
+          Nome: <a routerLink="/list/{{ catraca.id }}">{{ catraca.name }}</a> - área:
+          {{ catraca.area }}
+          <button (click)="showId(catraca)" class="btn btn-info btn-sm" style="float: right">Detalhes</button>
+          <button routerLink="/list/{{ catraca.id }}" class="btn btn-warning btn-sm"
+            style="float: right">Editar</button>
+        </li>
+      </div>
+    </ul>
+
+    <h3>{{ catracaDetails }}</h3>
+  </div>
+
 </div>
