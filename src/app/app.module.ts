@@ -16,6 +16,9 @@ import { ListRenderComponent } from './components/list-render/list-render.compon
 import { PipesComponent } from './components/pipes/pipes.component';
 import { TwoWayBindingComponent } from './components/two-way-binding/two-way-binding.component';
 
+import { ModalModule } from 'src/app/components/_modal';
+import { HomeComponent } from 'src/app/components/home';
+
 import { AppRoutingModule } from './app-routing.module';
 import { ItemDetailComponent } from './components/item-detail/item-detail.component';
 
@@ -33,8 +36,9 @@ import { ItemDetailComponent } from './components/item-detail/item-detail.compon
     PipesComponent,
     TwoWayBindingComponent,
     ItemDetailComponent,
+    HomeComponent,
   ],
-  imports: [BrowserModule, FormsModule, AppRoutingModule, HttpClientModule,],
+  imports: [BrowserModule, FormsModule, AppRoutingModule, HttpClientModule, ModalModule],
   providers: [],
   bootstrap: [AppComponent],
 })
