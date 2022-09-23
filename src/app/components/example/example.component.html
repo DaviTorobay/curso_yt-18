@@ -1,0 +1,11 @@
+<ion-list>
+    <ion-item>
+        <ion-select [compareWith]="compareWith" placeholder="Selecione o treinamento" (ionChange)="handleChange ($any($event))"
+            [multiple]="true">
+            <ion-select-option *ngFor="let food of foods" [value]="food">{{ food.name }}</ion-select-option>
+        </ion-select>
+    </ion-item>
+    <ion-item lines="none">
+        <ion-label>Treinamentos cadastrados: {{ currentFood | json }}</ion-label>
+    </ion-item>
+</ion-list>

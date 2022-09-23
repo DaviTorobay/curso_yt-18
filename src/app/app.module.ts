@@ -21,6 +21,9 @@ import { HomeComponent } from 'src/app/components/home';
 
 import { AppRoutingModule } from './app-routing.module';
 import { ItemDetailComponent } from './components/item-detail/item-detail.component';
+import { ExampleComponent } from './components/example/example.component';
+import { IonicModule } from '@ionic/angular';
+
 
 @NgModule({
   declarations: [
@@ -37,8 +40,9 @@ import { ItemDetailComponent } from './components/item-detail/item-detail.compon
     TwoWayBindingComponent,
     ItemDetailComponent,
     HomeComponent,
+    ExampleComponent,
   ],
-  imports: [BrowserModule, FormsModule, AppRoutingModule, HttpClientModule, ModalModule],
+  imports: [BrowserModule, FormsModule, AppRoutingModule, HttpClientModule, ModalModule, IonicModule.forRoot({})],
   providers: [],
   bootstrap: [AppComponent],
 })
