@@ -12,9 +12,9 @@ export class ExampleComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  currentFood = undefined;
+  currentTreinamento = undefined;
 
-  foods = [
+  treinamentos = [
     {
       id: 1,
       name: 'COVID-19',
@@ -45,6 +45,6 @@ export class ExampleComponent implements OnInit {
   }
 
   handleChange(ev: { target: { value: undefined; }; }) {
-    this.currentFood = ev.target.value;
+    this.currentTreinamento = ev.target.value;
   }
 }

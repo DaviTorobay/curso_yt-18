@@ -2,6 +2,12 @@
   {"id":1, "name": "Catraca 1", "area":"Serralheria"},
   {"id":2, "name": "Catraca 2", "area":"Almoxarifado"},
   {"id":3, "name": "Catraca 3", "area":"Casa de Máquinas"},
-  {"id":4, "name": "Catraca 4", "area":"Refeitório"}
-]
-}
+  {"id":4, "name": "Catraca 4", "area":"Refeitório"},
+  {"id":5, "name": "Catraca 5", "area":"Oficina"}
+],
+
+"Treinamentos" : [
+  {"id": 1,    "name": "COVID-19",    "type": "health" },
+  {"id": 2,    "name": "NR-35", "type": "security"},
+  {"id": 3,    "name": "NR-10", "type": "security"}
+]}
