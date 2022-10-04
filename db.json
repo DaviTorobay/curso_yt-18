@@ -10,4 +10,11 @@
   {"id": 1,    "name": "COVID-19",    "type": "health" },
   {"id": 2,    "name": "NR-35", "type": "security"},
   {"id": 3,    "name": "NR-10", "type": "security"}
-]}
+],
+
+"Catraca_Treinamentos":[
+  {"id_catraca": 1, "id_treinamentos":[1,2]},
+  {"id_catraca": 2, "id_treinamentos":[1,3]},
+  {"id_catraca": 3, "id_treinamentos":[2,3]}
+]
+}
