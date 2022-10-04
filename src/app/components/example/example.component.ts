@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Treinamentos } from 'src/app/Treinamento';
+import { ListService } from 'src/app/services/list.service';
 
 @Component({
   selector: 'app-example',
@@ -6,31 +8,39 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./example.component.css']
 })
 export class ExampleComponent implements OnInit {
+  treinamentos: Treinamentos[] = [];
 
-  constructor() { }
+  treinamentoDetails = '';
 
-  ngOnInit(): void {
+  constructor(private listService: ListService) {
+    this.getTreinamentos();
+   }
+
+  ngOnInit(): void {  }
+
+  getTreinamentos(): void {
+    this.listService.getTreinamentos().subscribe((treinamentos) => (this.treinamentos = treinamentos));
   }
 
   currentTreinamento = undefined;
 
-  treinamentos = [
-    {
-      id: 1,
-      name: 'COVID-19',
-      type: 'health',
-    },
-    {
-      id: 2,
-      name: 'NR-35',
-      type: 'security',
-    },
-    {
-      id: 3,
-      name: 'NR-10',
-      type: 'security',
-    },
-  ];
+  // treinamentos = [
+  //   {
+  //     id: 1,
+  //     name: 'COVID-19',
+  //     type: 'health',
+  //   },
+  //   {
+  //     id: 2,
+  //     name: 'NR-35',
+  //     type: 'security',
+  //   },
+  //   {
+  //     id: 3,
+  //     name: 'NR-10',
+  //     type: 'security',
+  //   },
+  // ];
 
   compareWith(o1: { id: any; }, o2: { some: (arg0: (o: any) => boolean) => any; id: any; }) {
     if (!o1 || !o2) {
