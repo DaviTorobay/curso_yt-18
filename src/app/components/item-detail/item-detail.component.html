@@ -2,15 +2,17 @@
   <div *ngIf="catraca" class="class">
     <h2>ID: {{ catraca.id }} - {{ catraca.name }} - Área: {{ catraca.area }}</h2>
     <h3>Treinamentos: </h3>
-    <button routerLink="/list/" style="float: right" class="btn btn-secondary btn-sm">Voltar</button>
-    <button (click)="openModal('custom-modal-1')" style="float: right" class="btn btn-success btn-sm">Adicionar</button>
+    <button routerLink="/list/" style="float: right" class="btn btn-secondary btn-sm m-1">Voltar</button>
+    <button (click)="openModal('custom-modal-1')" style="float: right" class="btn btn-success btn-sm m-1">Adicionar</button>
+    <br>
   </div>
 </div>
 
 <jw-modal id="custom-modal-1" *ngIf="catraca">
   <h1>Catraca {{catraca.id}}</h1>
   <p>Adicione o treinamento:
-  <app-example></app-example>
-  <button (click)="closeModal('custom-modal-1');" class="btn btn-secondary btn-sm">Close</button>
+    <app-example></app-example>
+    <button (click)="closeModal('custom-modal-1');" class="btn btn-success btn-sm m-1">Adicionar</button>
+    <button (click)="closeModal('custom-modal-1');" class="btn btn-secondary btn-sm">Close</button>
 </jw-modal>
 
